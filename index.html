@@ -68,10 +68,8 @@
         document.getElementById("scratchHTSCountdown").textContent = calculateDaysUntil(new Date('2025-04-03'));
         document.getElementById("drivingCountdown").textContent = calculateDaysUntil(new Date('2026-06-01'));
         document.getElementById("graduationCountdown").textContent = calculateDaysUntil(new Date('2027-06-01'));
-        // Call the function every day to update the countdowns
         setInterval(updateCountdowns, 24 * 60 * 60 * 1000);
       }
-      // Call the function to update the countdowns initially
       updateCountdowns();
     </script>
   </body>
