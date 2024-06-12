@@ -22,8 +22,6 @@
     <h1>Countdown</h1>
     <p>Days until my family gets back from vacation in Florida: <strong id="vacationCountdown"></strong>
     </p>
-    <p>Days until my family gets back from vacation in Florida: <strong id="vacationCountdown"></strong>
-    </p>
     <p>Days until I begin high school: <strong id="highSchoolCountdown"></strong>
     </p>
     <p>Days until the baseball season ends: <strong id="baseballCountdown"></strong>
@@ -55,7 +53,6 @@
           var dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
           return dayDiff;
         }
-        document.getElementById("vacationCountdown").textContent = calculateDaysUntil(new Date('2024-06-15'));
         document.getElementById("vacationCountdown").textContent = calculateDaysUntil(new Date('2024-06-15'));
         document.getElementById("highSchoolCountdown").textContent = calculateDaysUntil(new Date('2024-09-15'));
         document.getElementById("baseballCountdown").textContent = calculateDaysUntil(new Date('2024-09-30'));
