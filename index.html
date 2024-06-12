@@ -21,17 +21,51 @@
 <body>
   <h1>Countdown</h1>
   
-  <p>Days until my family gets back from vacation in Florida: <strong>3</strong></p>
-  <p>Days until I begin high school: <strong>75</strong></p>
-  <p>Days until the baseball season ends: <strong>108</strong></p>
-  <p>Days until Halloween: <strong>140</strong></p>
-  <p>Days until you will vote for Biden (provided you are 18+ and from the US): <strong>145</strong></p>
-  <p>Days until Thanksgiving: <strong>168</strong></p>
-  <p>Days until Christmas: <strong>195</strong></p>
-  <p>Days until 2025: <strong>202</strong></p>
-  <p>Days until I become old enough to have sex in Denmark: <strong>290</strong></p>
-  <p>Days until I get unbanned from both Scratch and HTS: <strong>292</strong></p>
-  <p>Days until I become old enough to drive: <strong>655</strong></p>
-  <p>Days until I graduate high school: <strong>1451</strong></p>
+  <script>
+    function updateCountdowns() {
+      // Get the current date
+      var currentDate = new Date();
+
+      // Calculate the difference in days between two dates
+      function calculateDaysUntil(targetDate) {
+        var timeDiff = targetDate.getTime() - currentDate.getTime();
+        var dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        return dayDiff;
+      }
+
+      // Update the countdown values
+      document.getElementById("vacationCountdown").textContent = calculateDaysUntil(new Date('2024-06-15'));
+      document.getElementById("highSchoolCountdown").textContent = calculateDaysUntil(new Date('2024-09-15'));
+      document.getElementById("baseballCountdown").textContent = calculateDaysUntil(new Date('2024-09-30'));
+      document.getElementById("halloweenCountdown").textContent = calculateDaysUntil(new Date('2024-10-31'));
+      document.getElementById("bidenVoteCountdown").textContent = calculateDaysUntil(new Date('2024-11-05'));
+      document.getElementById("thanksgivingCountdown").textContent = calculateDaysUntil(new Date('2024-11-28'));
+      document.getElementById("christmasCountdown").textContent = calculateDaysUntil(new Date('2024-12-25'));
+      document.getElementById("2025Countdown").textContent = calculateDaysUntil(new Date('2025-01-01'));
+      document.getElementById("denmarkSexCountdown").textContent = calculateDaysUntil(new Date('2025-04-01'));
+      document.getElementById("scratchHTSCountdown").textContent = calculateDaysUntil(new Date('2025-04-03'));
+      document.getElementById("drivingCountdown").textContent = calculateDaysUntil(new Date('2026-06-01'));
+      document.getElementById("graduationCountdown").textContent = calculateDaysUntil(new Date('2027-06-01'));
+    }
+
+    // Call the function to update the countdowns initially
+    updateCountdowns();
+
+    // Call the function every day to update the countdowns
+    setInterval(updateCountdowns, 24 * 60 * 60 * 1000);
+  </script>
+
+  <p>Days until my family gets back from vacation in Florida: <strong id="vacationCountdown"></strong></p>
+  <p>Days until I begin high school: <strong id="highSchoolCountdown"></strong></p>
+  <p>Days until the baseball season ends: <strong id="baseballCountdown"></strong></p>
+  <p>Days until Halloween: <strong id="halloweenCountdown"></strong></p>
+  <p>Days until you will vote for Biden (provided you are 18+ and from the US): <strong id="bidenVoteCountdown"></strong></p>
+  <p>Days until Thanksgiving: <strong id="thanksgivingCountdown"></strong></p>
+  <p>Days until Christmas: <strong id="christmasCountdown"></strong></p>
+  <p>Days until 2025: <strong id="2025Countdown"></strong></p>
+  <p>Days until I become old enough to have sex in Denmark: <strong id="denmarkSexCountdown"></strong></p>
+  <p>Days until I get unbanned from both Scratch and HTS: <strong id="scratchHTSCountdown"></strong></p>
+  <p>Days until I become old enough to drive: <strong id="drivingCountdown"></strong></p>
+  <p>Days until I graduate high school: <strong id="graduationCountdown"></strong></p>
 </body>
 </html>
